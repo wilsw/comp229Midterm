@@ -110,13 +110,13 @@ router.post('/:id', (req, res, next) => {
     {
       "_id": id,
       "Title": req.body.title,
-      "Aurthor": req.body.author,
-      "price": req.body.price,
+      "Author": req.body.author,
+      "Price": req.body.price,
       "Genre": req.body.genre
     }
   );
 
-  book.updateOne ({_id:id}, editbook, (err)=>{
+  book.updateOne ({_id: id}, editbook, (err)=>{
     if (err) {
       console.log(err);
       res.end(err);
